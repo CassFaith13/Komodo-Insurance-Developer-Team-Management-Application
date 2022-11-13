@@ -10,12 +10,12 @@ public class ProgramUI
     public void Run()
     {
         Seed();
-        Dev();
+        MainMenu();
         DevMenu();
         DevTeamMenu();
     }
 
-    private void Dev()
+    private void MainMenu()
     {
         bool keepRunning = true;
 
@@ -267,36 +267,6 @@ public class ProgramUI
         }
     }
 
-    private void AddDeveloperAccess()
-    {
-        Console.Clear();
-
-        ViewAllDevelopers();
-        System.Console.WriteLine("Please enter the ID number of the Developer you would like to give Pluralsight access to:");
-        int iD = int.Parse(Console.ReadLine());
-        Developer newDeveloper = new Developer();
-
-        System.Console.WriteLine("Do you want to give this Developer access to Pluralsight?\n"
-        + "1. Yes\n"
-        + "2. No");
-        string? accessInput = Console.ReadLine();
-        int pluralsightInt = accessInput != "" ? int.Parse(accessInput) : 0;
-        newDeveloper.HasPluralsight = (HasPluralsight)pluralsightInt;
-
-        bool updateSuccess = _dev.AddDeveloperAccess(iD, newDeveloper);
-
-        if (updateSuccess)
-        {
-            Console.Clear();
-            System.Console.WriteLine("Pluralsight access added successfully!\n");
-        }
-        else
-        {
-            Console.Clear();
-            System.Console.WriteLine("Pluralsight access NOT added. Please try again!\n");
-        }
-    }
-
     private void UpdateDevTeam()
     {
         Console.Clear();
@@ -330,6 +300,35 @@ public class ProgramUI
                     System.Console.WriteLine("Developer Team NOT updated. Please try again!\n");
                 }
             }
+        }
+    }
+    private void AddDeveloperAccess()
+    {
+        Console.Clear();
+
+        ViewAllDevelopers();
+        System.Console.WriteLine("Please enter the ID number of the Developer you would like to give Pluralsight access to:");
+        int iD = int.Parse(Console.ReadLine());
+        Developer newDeveloper = new Developer();
+
+        System.Console.WriteLine("Do you want to give this Developer access to Pluralsight?\n"
+        + "1. Yes\n"
+        + "2. No");
+        string? accessInput = Console.ReadLine();
+        int pluralsightInt = accessInput != "" ? int.Parse(accessInput) : 0;
+        newDeveloper.HasPluralsight = (HasPluralsight)pluralsightInt;
+
+        bool updateSuccess = _dev.AddDeveloperAccess(iD, newDeveloper);
+
+        if (updateSuccess)
+        {
+            Console.Clear();
+            System.Console.WriteLine("Pluralsight access added successfully!\n");
+        }
+        else
+        {
+            Console.Clear();
+            System.Console.WriteLine("Pluralsight access NOT added. Please try again!\n");
         }
     }
 
@@ -470,24 +469,6 @@ public class ProgramUI
         }
     }
 
-    private void ViewDeveloperByID()
-    {
-        Console.Clear();
-        ViewAllDevelopers();
-
-        System.Console.WriteLine("Please enter the ID number of Developer you would like to view:");
-        int userDevID = int.Parse(Console.ReadLine());
-
-        Developer developer = _dev.GetDevByID(userDevID);
-
-        System.Console.WriteLine("\n"
-            + $"ID #{developer.ID}: {developer.FullName}\n"
-            + "-------------\n"
-            + $"Last Name: {developer.LastName}, First Name: {developer.FirstName}\n"
-            + $"Pluralsight access: {developer.HasPluralsight}\n"
-            + "");
-    }
-
     private void ViewAllDevTeams()
     {
         System.Console.WriteLine("Developer Teams:");
@@ -507,6 +488,24 @@ public class ProgramUI
                 }
             }
         }
+    }
+
+    private void ViewDeveloperByID()
+    {
+        Console.Clear();
+        ViewAllDevelopers();
+
+        System.Console.WriteLine("Please enter the ID number of Developer you would like to view:");
+        int userDevID = int.Parse(Console.ReadLine());
+
+        Developer developer = _dev.GetDevByID(userDevID);
+
+        System.Console.WriteLine("\n"
+            + $"ID #{developer.ID}: {developer.FullName}\n"
+            + "-------------\n"
+            + $"Last Name: {developer.LastName}, First Name: {developer.FirstName}\n"
+            + $"Pluralsight access: {developer.HasPluralsight}\n"
+            + "");
     }
 
     private void ViewDevTeam()
