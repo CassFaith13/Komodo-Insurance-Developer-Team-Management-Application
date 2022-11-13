@@ -1,3 +1,6 @@
+// dotnet add DevTeams.Repositories reference DevTeams.(File to reference)
+
+// CRUD
 namespace DevTeam_Repository;
 public class DevTeamRepository
 {
@@ -27,8 +30,6 @@ public class DevTeamRepository
         if (oldDevTeam != null)
         {
             oldDevTeam.TeamName = updatedTeam.TeamName;
-            // oldDevTeam.TeamID = newDevTeam.TeamID;
-            // oldDevTeam.Developers = updatedTeam.Developers;
             return true;
         } 
         else
@@ -48,7 +49,6 @@ public class DevTeamRepository
     }
 
     //Helper Methods
-
     public DevTeam GetDevTeamByID(int getTeamID)
     {
         foreach (DevTeam devTeam in _devTeamDatabase)
@@ -66,7 +66,6 @@ public class DevTeamRepository
         {
             var newID = GetDevTeamByID(addDevToTeam);
 
-            // int teamCount = _devTeamDatabase.Count();
             if (newID != null && devs != null)
             {
             newID.Developers.AddRange(devs);

@@ -1,10 +1,10 @@
+// dotnet add DevTeams.Repositories reference DevTeams.(File to reference)
+
 // CRUD
 namespace Developer_Repository;
 public class DeveloperRepository
 {
-    //Fake Database
     protected readonly List<Developer> _devDatabase = new List<Developer>();
-    // private int _count;
 
     // Create
     public bool AddNewDeveloper(Developer developer)
@@ -23,10 +23,8 @@ public class DeveloperRepository
     }
 
     // Read One
-
     public Developer GetDeveloper(int iD)
     {
-        // return _devDatabase.SingleOrDefault(developer => developer.ID == iD);
         foreach (Developer developer in _devDatabase)
         {
             if(developer.ID == iD)
@@ -36,7 +34,6 @@ public class DeveloperRepository
     }
 
     // Update
-
     public bool UpdateDevData(int iD, Developer newDevData)
     {
         Developer oldDevData = _devDatabase.Find(developer => developer.ID == iD);
@@ -44,7 +41,6 @@ public class DeveloperRepository
         {
             oldDevData.LastName = newDevData.LastName;
             oldDevData.FirstName = newDevData.FirstName;
-            // oldDevData.ID = newDevData.ID;
             oldDevData.HasPluralsight = newDevData.HasPluralsight;
             return true;
         } 
@@ -81,7 +77,6 @@ public class DeveloperRepository
     }
 
     // Helper Methods
-
     public Developer GetDevByID(int getID)
     {
         foreach (Developer developer in _devDatabase)

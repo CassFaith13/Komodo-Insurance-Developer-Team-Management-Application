@@ -1,6 +1,5 @@
-// dotnet add DevTeams.UI reference DevTeams."whatever file I want to reference"
+// dotnet add DevTeams.UI reference DevTeams.(File to reference)
 
-//I have to finish DevTeams and then I pull from both systems here!
 using Developer_Repository;
 using DevTeam_Repository;
 public class ProgramUI
@@ -330,7 +329,6 @@ public class ProgramUI
                 }
             }
         }
-
     }
 
     private void AddDevsToTeam()
@@ -507,9 +505,7 @@ public class ProgramUI
                     + "");
                 }
             }
-
         }
-
     }
 
     private void ViewDevTeam()

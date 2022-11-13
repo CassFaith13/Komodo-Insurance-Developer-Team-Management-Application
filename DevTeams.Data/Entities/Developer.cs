@@ -7,7 +7,6 @@
             ID = iD;
             LastName = lastName;
             FirstName = firstName;
-            // FullName = fullName;
             HasPluralsight = hasPluralsight;
         }
 
