@@ -62,12 +62,12 @@ public class ProgramUI
         {
             Console.Clear();
             System.Console.WriteLine("Please select from the following options:\n"
-            + "1. Create a new Developer.\n"
+            + "1. Add a new Developer to the system.\n"
             + "2. Update Developer information.\n"
             + "3. Update Plursalsight access to an existing Developer.\n"
-            + "4. Remove Developer.\n"
+            + "4. Remove Developer from system.\n"
             + "5. Show all Developers and Pluralsight access privileges.\n"
-            + "6. Show all Developers who do NOT have Pluralsight access privileges.\n"
+            + "6. List Developers who do NOT have Pluralsight access privileges.\n"
             + "7. Show a specific Developer.\n"
             + "8. Developer Teams menu\n"
             + "9. Exit.");
@@ -109,7 +109,8 @@ public class ProgramUI
                     System.Console.WriteLine("Unable to compute. Please try again.");
                     break;
             }
-            System.Console.WriteLine("Press any key to continue...");
+            System.Console.WriteLine("\n"
+            + "Press any key to continue...");
             Console.ReadKey();
         }
     }
@@ -122,10 +123,10 @@ public class ProgramUI
         {
             Console.Clear();
             System.Console.WriteLine("Please select from the following options:\n"
-            + "1. Create a new Developer Team.\n"
+            + "1. Add a new Developer Team to the system.\n"
             + "2. Update a Developer Team.\n"
             + "3. Add Developers to a Developer Team.\n"
-            + "4. Remove a Developer Team.\n"
+            + "4. Remove a Developer Team from the system.\n"
             + "5. Show all Developer Teams.\n"
             + "6. Show a specific Developer Team.\n"
             + "7. Developer menu\n"
@@ -165,7 +166,8 @@ public class ProgramUI
                     System.Console.WriteLine("Unable to compute. Please try again.");
                     break;
             }
-            System.Console.WriteLine("Press any key to continue...");
+            System.Console.WriteLine("\n"
+            + "Press any key to continue...");
             Console.ReadKey();
         }
     }
@@ -239,13 +241,13 @@ public class ProgramUI
 
         Developer newDeveloper = new Developer();
 
-        System.Console.WriteLine("Please enter the last name of the Developer:");
+        System.Console.WriteLine("Please update the last name of the Developer:");
         newDeveloper.LastName = Console.ReadLine();
 
-        System.Console.WriteLine("Please enter the first name of the Developer:");
+        System.Console.WriteLine("Please update the first name of the Developer:");
         newDeveloper.FirstName = Console.ReadLine();
 
-        System.Console.WriteLine("Please enter if this Developer has Pluralsight access:\n"
+        System.Console.WriteLine("Please update this Developer's Pluralsight access privileges:\n"
         + "1. Yes\n"
         + "2. No");
         int pluralsightInt = int.Parse(Console.ReadLine());
@@ -256,12 +258,12 @@ public class ProgramUI
         if (developerAdded)
         {
             Console.Clear();
-            System.Console.WriteLine("Developer added successfully!\n");
+            System.Console.WriteLine("Developer updated successfully!\n");
         }
         else
         {
             Console.Clear();
-            System.Console.WriteLine("Developer NOT added. Please try again!\n");
+            System.Console.WriteLine("Developer NOT updated. Please try again!\n");
         }
     }
 
@@ -270,7 +272,7 @@ public class ProgramUI
         Console.Clear();
 
         ViewAllDevelopers();
-        System.Console.WriteLine("Please enter the ID number of the Developer you would like to add Pluralsight access to:");
+        System.Console.WriteLine("Please enter the ID number of the Developer you would like to give Pluralsight access to:");
         int iD = int.Parse(Console.ReadLine());
         Developer newDeveloper = new Developer();
 
@@ -312,7 +314,7 @@ public class ProgramUI
             {
                 DevTeam updatedTeam = new DevTeam();
 
-                System.Console.WriteLine("Please enter the new name of the Developer Team:");
+                System.Console.WriteLine("Please update the name of the Developer Team:");
                 teamDev.TeamName = Console.ReadLine();
 
                 bool updateSuccess = _devTeam.UpdatedDevTeam(userTeamID, teamDev);
@@ -355,10 +357,10 @@ public class ProgramUI
                 if (auxDevInDb.Count() > 0)
                 {
                     System.Console.WriteLine($"Do you want to add a Developer to Team #{userTeamID}?\n"
-                    + "Yes\n"
-                    + "No");
+                    + "1. Yes\n"
+                    + "2. No");
                     var userInput = Console.ReadLine();
-                    if (userInput == "Yes")
+                    if (userInput == "1")
                     {
                         ViewAllDevelopers();
                         System.Console.WriteLine($"Enter the ID number of the Developer you would like to add to Team #{userTeamID}:");
@@ -501,8 +503,7 @@ public class ProgramUI
             {
                 foreach (Developer developer in devTeam.Developers)
                 {
-                    Console.WriteLine($"ID #{developer.ID}: {developer.FullName}\n"
-                    + "");
+                    Console.WriteLine($"ID #{developer.ID}: {developer.FullName}");
                 }
             }
         }
@@ -520,15 +521,15 @@ public class ProgramUI
         DevTeam devTeam = _devTeam.GetDevTeamByID(userTeamID);
 
         System.Console.WriteLine($"\n"
-        + $"Developer Team Name: {devTeam.TeamName} | Team ID#: {devTeam.TeamID}");
+        + $"Developer Team Name: {devTeam.TeamName} | Team ID#: {devTeam.TeamID}\n"
+        + "-------------\n"
+        + "Team Members:");
 
         if (devTeam.Developers != null)
         {
             foreach (Developer developer in devTeam.Developers)
             {
-                Console.WriteLine("\n"
-                + $"Team Members: {developer.FullName}\n"
-                + "");
+                Console.WriteLine($"ID #{developer.ID}: {developer.FullName}");
             }
         }
         else
@@ -554,6 +555,9 @@ public class ProgramUI
         Developer rainfeather = new Developer(_dev.GetAllDevelopers().Count + 1, "Rainfeather", "Ton", "Ton Rainfeather", HasPluralsight.Yes);
         _dev.AddNewDeveloper(rainfeather);
 
+        Developer faith = new Developer(_dev.GetAllDevelopers().Count + 1, "Faith", "Cassandra", "Cassandra Faith", HasPluralsight.Yes);
+        _dev.AddNewDeveloper(faith);
+
         Developer johnson = new Developer(_dev.GetAllDevelopers().Count + 1, "Johnson", "Dwayne", "Dwayne Johnson", HasPluralsight.No);
         _dev.AddNewDeveloper(johnson);
 
@@ -571,6 +575,7 @@ public class ProgramUI
 
         List<Developer> devTeamThree = new List<Developer>();
         devTeamThree.Add(rainfeather);
+        devTeamThree.Add(faith);
 
         DevTeam red = new DevTeam("Red", _devTeam.GetAllTeams().Count + 1, devTeamOne);
         _devTeam.AddNewTeam(red);
