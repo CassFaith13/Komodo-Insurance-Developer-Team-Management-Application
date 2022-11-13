@@ -1,0 +1,12 @@
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/bin/Debug/net6.0/DevTeams.Data.deps.json
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/bin/Debug/net6.0/DevTeams.Data.dll
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/bin/Debug/net6.0/DevTeams.Data.pdb
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.csproj.AssemblyReference.cache
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.AssemblyInfoInputs.cache
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.AssemblyInfo.cs
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.csproj.CoreCompileInputs.cache
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.dll
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/refint/DevTeams.Data.dll
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/DevTeams.Data.pdb
+/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/Debug/net6.0/ref/DevTeams.Data.dll

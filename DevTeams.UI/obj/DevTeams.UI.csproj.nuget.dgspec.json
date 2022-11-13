@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.UI/DevTeams.UI.csproj": {}
+  },
+  "projects": {
+    "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj",
+        "projectName": "DevTeams.Data",
+        "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj",
+        "packagesPath": "/Users/home/.nuget/packages/",
+        "outputPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/home/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/DevTeams.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/DevTeams.Repositories.csproj",
+        "projectName": "DevTeams.Repositories",
+        "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/DevTeams.Repositories.csproj",
+        "packagesPath": "/Users/home/.nuget/packages/",
+        "outputPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/home/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj": {
+                "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.UI/DevTeams.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.UI/DevTeams.UI.csproj",
+        "projectName": "DevTeams.UI",
+        "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.UI/DevTeams.UI.csproj",
+        "packagesPath": "/Users/home/.nuget/packages/",
+        "outputPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.UI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/home/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj": {
+                "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Data/DevTeams.Data.csproj"
+              },
+              "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/DevTeams.Repositories.csproj": {
+                "projectPath": "/Users/home/Documents/ElevenFiftyAcademy/ElevenFiftyAcademy160/codingFoundations/assignments/DevTeams/DevTeams.Repositories/DevTeams.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
